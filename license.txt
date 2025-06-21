@@ -1,0 +1,9 @@
+CYBER REQ – DoS Simulator
+Author: Yarra Rajkumar
+
+This software is intended for EDUCATIONAL and RESEARCH PURPOSES ONLY.
+Do not use it on any website or server without full legal authorization.
+
+Unauthorized use may violate laws and could result in serious consequences.
+
+Use responsibly.
