@@ -1,87 +1,109 @@
-# 🛡️ CYBER-REQ
+# 🛡️ CYBER REQ - DoS Simulator Tool (v2.0)
 
-**CYBER-REQ** is a GUI-based HTTP request generator tool created using Python. It allows users to send multiple HTTP GET requests to any target URL with complete control over the number of requests and delay between them. It also includes live logging, cancel control, and a hacker-themed interface.
-
-> ⚠️ This tool is intended **strictly for educational purposes only**. Please do not use it for unethical or illegal activity.
----
-
-## 🎯 Features
-
-- ✅ GUI built with Python Tkinter (no terminal needed)
-- 🔁 Send N number of HTTP requests to any URL
-- ⏱️ Add custom delay between each request
-- 🛑 Cancel requests any time mid-process
-- 🧾 Terminal-style live log output
-- 👨‍💻 Developer credits and warning disclaimer included
-- 🎨 Hacker-style dark theme with custom logo + ASCII banner
+> 🚀 A GUI tool to simulate HTTP flood-style requests using Python — built for educational and ethical use only.
 
 ---
 
-## ⚙️ Installation Guide
+## 🧠 Description
 
-### 🔹 Step 1: Clone the Repo
-```bash
-git clone https://github.com/RajJJDVPD/CYBER-REQ.git
-cd CYBER-REQ
-🔹 Step 2: Install Python 3
-✅ Windows:
-Download and install Python from:
-👉 https://www.python.org/downloads/
+CYBER REQ is a graphical user interface (GUI) tool developed for **ethical hacking education**, **penetration testing practice**, and **cybersecurity demonstrations**. It allows users to send **N number of HTTP requests** to a target URL using various methods (GET, POST, etc.) with optional delay and real-time logging.
 
-✅ During installation, make sure to check ✔ Add Python to PATH.
+---
 
-✅ Linux/Kali:
-Python 3 is usually pre-installed. If not, install with:
+## 🆕 What’s New in Version 2.0
 
+- ❌ Removed Proxy Support  
+  ➤ *Note: Use [TOR](https://www.torproject.org/download/) or any VPN instead.*
+- ⚡ Improved multi-threading for faster, more stable request sending
+- 🖥️ Optimized UI (Removed splash screen lag)
+- 📜 Real-time request logs and attack summary
+- 🎯 Added randomized user-agents and custom headers
+
+---
+
+## 🛠️ Features
+
+- 📡 HTTP Methods: `GET`, `POST`, `HEAD`, `OPTIONS`
+- 🧩 Custom request count & optional delay per request
+- 🖥️ GUI Interface with real-time log console
+- 📊 Final summary: success, fail, SSL errors
+- 🛑 Cancel attack button (safe interruption)
+- 🔐 Randomized headers & user-agent for realism
+- 🧑‍💻 Built for students, cybersecurity learners & demo labs
+
+---
+
+## 📦 Installation (All Platforms)
+
+### 🪟 Windows
+
+```powershell
+pip install -r requirements.txt
+python gui_tool.py
+To build a standalone .exe file:
+
+powershell
+Copy code
+pip install pyinstaller
+pyinstaller --onefile --noconsole --icon=cyber-req.ico gui_tool.py
+🔍 Run the compiled .exe from the dist/ folder.
+
+🐧 Linux (Debian/Ubuntu/Kali)
 bash
 Copy code
 sudo apt update
-sudo apt install python3 python3-pip
-📦 Python Package Installation
-Install all required libraries using:
+sudo apt install python3 python3-pip -y
+pip3 install -r requirements.txt
+python3 gui_tool.py
+To build a binary (optional):
 
 bash
 Copy code
-pip install requests pyfiglet pillow
-If you're on Linux and using python3, use:
+pip3 install pyinstaller
+pyinstaller --onefile --noconsole gui_tool.py
+🍎 macOS
+bash
+Copy code
+brew install python3  # If Python is not installed
+pip3 install -r requirements.txt
+python3 gui_tool.py
+Optional app bundle build:
 
 bash
 Copy code
-pip3 install requests pyfiglet pillow
-🚀 How to Run
-🖥️ Windows
+pip3 install pyinstaller
+pyinstaller --onefile --noconsole gui_tool.py
+💡 macOS users may need to allow the app manually under System Settings → Privacy & Security.
+
+🧰 Usage
+To launch the tool:
+
 bash
 Copy code
 python gui_tool.py
-🐧 Linux / Kali
+✅ Works on both CLI and GUI environments. Internet required for testing.
+
+To compile into a standalone executable (for Windows):
+
 bash
 Copy code
-python3 gui_tool.py
-💡 How It Works
-Enter a valid target URL (starts with http:// or https://)
+pyinstaller --onefile --noconsole --icon=cyber-req.ico gui_tool.py
+📁 Project Structure
+Copy code
+cyber-req/
+│
+├── gui_tool.py
+├── gui_tool.spec
+├── cyber-req.ico
+├── license.txt
+├── logo.png
+├── requirements.txt
+├── README.md
+└── dist/
+📢 Disclaimer
+CYBER REQ is developed solely for educational and demonstration purposes.
+Any misuse of this tool (unauthorized DoS attacks, disruption of live systems, etc.) is strictly prohibited and against the developer’s intent. Always seek legal permission before testing any real-world target.
 
-Enter number of HTTP requests to send
-
-Set the delay in seconds between requests
-
-Click 🚀 Launch to start
-
-Click 🛑 Cancel to stop any time
-
-View real-time log in the output box
-
-⚠️ Disclaimer
-This tool is designed only for educational and ethical testing purposes.
-
-❌ Do not use on systems you don’t own or without permission
-
-⚠️ Misuse may be illegal and unethical
-
-🧠 Use it only in test environments or with written authorization
-
-👨‍💻 Developer
-Yarra Rajkumar
-📧 rajkumar0yarra@gmail.com
-
-📘 License
-This code is open for educational use only and may not be used for commercial or malicious purposes.
+© 2025 Yarra Rajkumar
+🔗 GitHub: RajJJDVPD
+🔗 LinkedIn: yarra-raj-kumar

@@ -167,3 +167,19 @@ footer_label = tk.Label(root, text="Built by Yarra Rajkumar | Educational Use On
 footer_label.pack(pady=5)
 
 root.mainloop()
+from concurrent.futures import ThreadPoolExecutor, as_completed
+
+def send_request(i, url, method, headers):
+    try:
+        response = requests.request(method, url, headers=headers, timeout=10)
+        return (i, response.status_code)
+    except Exception as e:
+        return (i, str(e))
+
+# Inside your start_attack or thread logic
+with ThreadPoolExecutor(max_workers=10) as executor:
+    futures = [executor.submit(send_request, i+1, url, method, headers) for i in range(num_requests)]
+
+    for future in as_completed(futures):
+        i, result = future.result()
+        log_to_gui(f"[{i}] Result: {result}")
